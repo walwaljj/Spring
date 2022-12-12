@@ -8,6 +8,8 @@ public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>(); //실무에서는 동시성 문제로 공유되는 변수는 HashMap을 쓰지않는다.
     //                  키   값
+
+
     private static Long sequence = 0L;// 순서를 나타낼 변수
 
     @Override
@@ -35,4 +37,8 @@ public class MemoryMemberRepository implements MemberRepository{
     public List<Member> findAll() {
         return new ArrayList<>(store.values());
     }
+    public void clearStore(){
+        store.clear();
+    }
+
 }
