@@ -1,9 +1,10 @@
 package helloo.helloospring.repository;
 
 import helloo.helloospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
-
+@Repository
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>(); //실무에서는 동시성 문제로 공유되는 변수는 HashMap을 쓰지않는다.
