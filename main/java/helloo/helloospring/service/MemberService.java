@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-@Service
+
 public class MemberService { // 서비스 클레스는 비지니스와 가까운 용어를 사용해야함
                             // 그래야 유지보수때 평함.
 
@@ -24,7 +24,7 @@ public class MemberService { // 서비스 클레스는 비지니스와 가까운
 /**============================== 해결 :외부에서 직접 값을 받을 수 있게 변경하기. ==> MemberServiceTest로 이동해 변경해주기.*/
     private final MemberRepository memberRepository;
 
-    @Autowired
+
     public MemberService(MemberRepository memberRepository){// 서비스네 ? 스프링컨테이너에 등록 ==> 생성자 호출 => Autowired 를 확인 후
                                                         // 스프링컨테이너의 필요한 클레스를 호출해줌.
         this.memberRepository = memberRepository;

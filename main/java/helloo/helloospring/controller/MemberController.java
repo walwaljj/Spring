@@ -21,4 +21,6 @@ public class MemberController {
                                                             //public class MemoryMemberRepository { 도 해주기. ==> 스프링에서 repository에 등록하게됨.
         this.memberService = memberService;
     }
+
+
 }
