@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
 <body>
   <div class = "container">
     <form action="/members/new" method="post">
       <div class ="form-group">
         <label for="name">이름</label>
-        <input type="text" id="name" placeholder="이름을 입력하세요">
+        <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
       </div>
-      <button type="submit">등록</button>
+      <button type="submit">등록</button><!--=> 등록 버튼을 누르면 form의 name이 post방법으로 값이 반환됨. => MemberController-->
     </form>
   </div>
 </body>

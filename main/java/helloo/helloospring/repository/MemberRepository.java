@@ -3,7 +3,8 @@ package helloo.helloospring.repository;
 import helloo.helloospring.domain.Member;
 import org.springframework.stereotype.Repository;
 
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
 
 public interface MemberRepository {
     Member save(Member member);//회원을 저장하면 반환되는 메서드.

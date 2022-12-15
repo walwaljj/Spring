@@ -11,7 +11,7 @@ public class MemoryMemberRepository implements MemberRepository{
     //                  키   값
 
 
-    private static Long sequence = 0L;// 순서를 나타낼 변수
+    private static long sequence = 0L;// 순서를 나타낼 변수
 
     @Override
     public Member save(Member member) { // 멤버를 저장할 때 변화 될 것.

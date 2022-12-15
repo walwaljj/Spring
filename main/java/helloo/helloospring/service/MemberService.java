@@ -66,11 +66,13 @@ public class MemberService { // 서비스 클레스는 비지니스와 가까운
     }
     /**전체 회원 조회*/
     public List<Member> findMembers(){
+
         return memberRepository.findAll(); // 반환 타입이 list<member>
     }
 
     /**멤버 찾기*/
     public Optional<Member> findOne(Long memberId){
+
         return memberRepository.findById(memberId);
     }
 }
