@@ -12,8 +12,8 @@
       </tr>
       </thead>
       <tbody>
-      <tr th:each="member : ${members}">
-        <td th:text="${member.id}"></td>
+      <tr th:each="member : ${members}"><!--members 값을 읽어오고 , thymeleaf를 돌며 로직을 실행함.-->
+        <td th:text="${member.id}"></td><!--실행 후 id와 name을 가져옴.-->
         <td th:text="${member.name}"></td>
       </tr>
       </tbody>

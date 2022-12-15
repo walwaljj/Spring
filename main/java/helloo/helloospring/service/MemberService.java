@@ -41,7 +41,7 @@ public class MemberService { // 서비스 클레스는 비지니스와 가까운
 
     }
 
-    private Long ValidateDuplicateMember(Member member) {   //자주 쓰일 내용을 함수화 함
+    private void ValidateDuplicateMember(Member member) {   //자주 쓰일 내용을 함수화 함
                                                             // 코드 드레그 후 Ctrl + Alt + m 을 하면 됨
 
         //방법1
@@ -50,8 +50,8 @@ public class MemberService { // 서비스 클레스는 비지니스와 가까운
         result.ifPresent(m ->{ // (ifPresent) 만약 Member에 값이 null이 아니라 값이 있으면 m 으로 이동,
             throw new IllegalStateException("이미 존재하는 회원입니다."); // 예외를 던지기
         });
-        memberRepository.save(member);
-        return member.getId();
+//        memberRepository.save(member);
+//        return member.getId();
 
         /**
          //방법2 (Optional) 생략 ,findByName 값이 Optional의 값이기 때문에 바로 ifPresent 를 사용할 수 있다.

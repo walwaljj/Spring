@@ -44,7 +44,7 @@ public class MemberController {
     @GetMapping("/members")
     public String list(Model model){
         List<Member> members = memberService.findMembers();
-        model.addAttribute("members",members);
+        model.addAttribute("members",members);//model의 key는 members ,members안에는 list로 모든 회원을 조회해 담아둠.
         return "members/memberList";
     }
 }
