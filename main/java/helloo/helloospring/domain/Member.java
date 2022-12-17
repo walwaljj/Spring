@@ -1,5 +1,6 @@
 package helloo.helloospring.domain;
 
+
 public class Member {
 
     private Long id;// 시스템이 데이터를 구분하기 위해 저장하는 id
