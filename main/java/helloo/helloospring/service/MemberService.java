@@ -6,10 +6,11 @@ import helloo.helloospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
-
+@Transactional
 public class MemberService { // 서비스 클레스는 비지니스와 가까운 용어를 사용해야함
                             // 그래야 유지보수때 평함.
 

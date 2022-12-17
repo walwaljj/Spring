@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -35,6 +36,7 @@ class MemberServiceIntegrationTest {
 
 
     @Test
+//    @Commit
     void 회원가입() { // join의 테스트
                 // 테스트는 한글로 메서드를 적어도 무관함. 그리고 테스트는 빌드에 포함되지 않는다.
 
@@ -43,7 +45,7 @@ class MemberServiceIntegrationTest {
 
                 //given(주어짐)
         Member member = new Member();
-        member.setName("spring"); // 만약 spring 으로 변경하면 에러남.
+        member.setName("spring100"); // 만약 spring 으로 변경하면 에러남.
                                     // 왜? 스프링이 이미 가입이 됬기 때문에 다른메소드에서 에러.
                                 // 해결 : afterEach 로 메모리 해제해주기.
 
