@@ -36,20 +36,10 @@ public class MemberService { // 서비스 클레스는 비지니스와 가까운
     /*회원 가입기능*/
     public Long join(Member member){
 
-
-        long start = System.currentTimeMillis();
-
-        try {
             //join시 같은 이름이 있는 중복회원은 가입되지 않게하기
             ValidateDuplicateMember(member); // 중복회원 검증
             memberRepository.save(member); // 통과했다면 저장.
             return member.getId();
-        }finally{
-            long finish = System.currentTimeMillis();
-            long timeMs = finish - start;
-            System.out.println(timeMs);
-        }
-
 
     }
 
