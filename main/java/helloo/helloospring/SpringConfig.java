@@ -1,5 +1,6 @@
 package helloo.helloospring;
 
+import helloo.helloospring.aop.TimeTraceAop;
 import helloo.helloospring.repository.MemberRepository;
 import helloo.helloospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,4 +48,9 @@ public class SpringConfig {
 //         //5. Controller -> Service ->Repository 순서가 만들어짐.
 //
 //    }
+
+    @Bean
+    public TimeTraceAop timeTraceAop(){
+        return new TimeTraceAop();
+    }
 }
