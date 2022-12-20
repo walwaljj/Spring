@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class TimeTraceAop {
     @Around("execution(* helloo.helloospring..*(..))") // 문법 : 패키지.디렉토리..*클레스(..등등파라미터타입)
     public Object execute(ProceedingJoinPoint joinPoint) throws Throwable{
-
+            //
         long start = System.currentTimeMillis();
         System.out.println("START : " + joinPoint.toString());
 
